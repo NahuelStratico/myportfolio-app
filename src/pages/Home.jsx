@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import './styles/home.css'
 import image from '../img/nahuel.png'
 
@@ -13,7 +14,7 @@ const Home = () => {
                             <p>Hello, I'm</p>
                             <h1>Nahuel Stratico</h1>
                             <h2>Frontend web developer</h2>
-                            <a href="#"className='btn'>More about me</a>
+                            <Link className='btn' to="/about">More about me</Link>
                             <a href="#"className='btn'>portfolio</a>
                         </div>
                         <div className="home-img">
