@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Button from '../components/styled'
 import './styles/home.css'
 import image from '../img/nahuel.png'
 
@@ -14,8 +15,10 @@ const Home = () => {
                             <p>Hello, I'm</p>
                             <h1>Nahuel Stratico</h1>
                             <h2>Frontend web developer</h2>
-                            <Link className='btn' to="/about">More about me</Link>
-                            <a href="#"className='btn'>portfolio</a>
+                            {/* <Link className='btn' to="/about">More about me</Link>
+                            <Link className='btn'  to="/portfolio">portfolio</Link> */}
+                            <Link className='btn' to="/about"><Button>More about me</Button></Link>
+                            <Link className='btn' to="/portfolio"><Button>portfolio</Button></Link>
                         </div>
                         <div className="home-img">
                             <div className="img-box">

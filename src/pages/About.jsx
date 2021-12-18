@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import Education from '../components/Education'
+import Experience from '../components/Experience'
 import image from '../img/nahuel.png'
 import './styles/home.css'
 import './styles/about.css'
@@ -56,7 +58,12 @@ const About = () =>{
                         </div>
 
                         {/* --- Education */}
-                        <div className={`tab-content ${education ? "active" : ""}`} id='education'>
+                        
+                        {education ? <Education /> : null}
+                        
+                        {experience ? <Experience /> : null}
+
+                        {/* <div className={`tab-content ${education ? "active" : ""}`} id='education'>
                             <div className="timeline">
                                 <div className="timeline-item">
                                     <span className='date'>2013 - 2016</span>
@@ -74,10 +81,10 @@ const About = () =>{
                                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione perspiciatis dolorum at dolore ab.</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* --- Experience */}
-                        <div className={`tab-content ${experience ? "active" : ""}`} id='experience'>
+                        {/* <div className={`tab-content ${experience ? "active" : ""}`} id='experience'>
                             <div className="timeline">
                                 <div className="timeline-item">
                                     <span className='date'>2013 - 2016</span>
@@ -95,7 +102,7 @@ const About = () =>{
                                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione perspiciatis dolorum at dolore ab.</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         <a href="#" className='btn'>download cv</a>
                         <a href="#" className='btn'>contact me</a>

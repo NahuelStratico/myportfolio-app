@@ -43,12 +43,12 @@ section{
 ::-webkit-scrollbar-thumb{
     background-color: var(--main-color);
 }
-button{
+/* button{
     font-family: inherit;
     user-select: none;
-}
+} */
 /* Buttons */
-.btn{
+/* .btn{
     line-height: 1.5;
     background-color: var(--white-alpha-25);
     border: 1pz solid var(--white-alpha-40);
@@ -83,7 +83,7 @@ button{
 }
 .btn:hover{
     color: var(--white);
-}
+} */
 
 /* --------------
 Home 
