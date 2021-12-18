@@ -43,10 +43,10 @@ section{
 ::-webkit-scrollbar-thumb{
     background-color: var(--main-color);
 }
-/* button{
+button{
     font-family: inherit;
     user-select: none;
-} */
+}
 /* Buttons */
 /* .btn{
     line-height: 1.5;

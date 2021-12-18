@@ -110,9 +110,9 @@
     /* display: none; */
 }
 /* .about-text  */
-.tab-content.active{
-    /* display: block; */
-}
+/* .tab-content.active{
+    display: block;
+} */
 /* .about-text  */
 .timeline-item{
     margin-bottom: 30px;

@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import Education from '../components/Education'
 import Experience from '../components/Experience'
+import { skills } from '../components/ArrayList'
+import Button from '../components/styled'
 import image from '../img/nahuel.png'
 import './styles/home.css'
 import './styles/about.css'
@@ -37,13 +39,22 @@ const About = () =>{
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptatibus nemo amet officiis aliquam molestiae harum ratione veniam maxime distinctio quis minus minima quisquam expedita, reiciendis laboriosam nesciunt quos tempore esse ipsam accusantium sequi? Repudiandae quos, id dolorem, laborum vitae sed accusamus a labore nobis maxime veritatis quisquam, reiciendis illo.</p>
                         <h3>Skills</h3>
                         <div className="skills">
-                            <div className="skill-item">html</div>
+                            {
+                                    skills.map((item, index) => (
+                                        <div className="skill-item" key={index}>
+                                            {item}
+                                        </div>
+                                    ))
+                                
+                            }
+                           
+                            {/* <div className="skill-item">html</div>
                             <div className="skill-item">css</div>
                             <div className="skill-item">javascript</div>
                             <div className="skill-item">bootstrap</div>
                             <div className="skill-item">react</div>
                             <div className="skill-item">figma</div>
-                            <div className="skill-item">sass</div>
+                            <div className="skill-item">sass</div> */}
                         </div>
 
                         <div className="about-tabs">
@@ -104,8 +115,8 @@ const About = () =>{
                             </div>
                         </div> */}
 
-                        <a href="#" className='btn'>download cv</a>
-                        <a href="#" className='btn'>contact me</a>
+                        <Button href="#" className='btn'>download cv</Button>
+                        <Button href="#" className='btn'>contact me</Button>
 
                     </div>
                 </div>

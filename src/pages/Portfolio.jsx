@@ -1,3 +1,5 @@
+import { portfolio } from '../components/ArrayList'
+import Button from '../components/styled'
 import './styles/home.css'
 import './styles/about.css'
 import './styles/portfolio.css'
@@ -13,8 +15,19 @@ const Portfolio = () => {
                 </div>
                 <div className="row">
                     {/* Portfolio Item Start */}
-                    <div className="portfolio-item">
-                        <div className="portfolio-item-thumbnail">
+                   
+                        {
+                            portfolio.map((item, index) => (
+                                <div className="portfolio-item">
+                                    <div className="portfolio-item-thumbnail" key={index}>
+                                        <img src={item.img} alt={item.alt} />
+                                    </div>
+                                    <h3 className='portfolio-item-title'>{item.title}</h3>
+                                    <Button>view proyect</Button>
+                                </div>
+                            ))
+                        }
+                        {/* <div className="portfolio-item-thumbnail">
                             <img src="https://picsum.photos/500" alt="portfolio item thumb" />
                         </div>
                         <h3 className='portfolio-item-title'>education course website</h3>
@@ -31,8 +44,8 @@ const Portfolio = () => {
                                     <li>View Online - <span><a href="#" target="_blank">www.domain.com</a></span> </li>
                                 </ul>
                             </div>
-                        </div>
-                    </div>
+                        </div> */}
+    
                 </div>
             </div>
         </section>
