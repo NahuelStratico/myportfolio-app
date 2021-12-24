@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Education from '../components/Education'
 import Experience from '../components/Experience'
 import { skills } from '../components/ArrayList'
@@ -116,7 +117,11 @@ const About = () =>{
                         </div> */}
 
                         <Button href="#" className='btn'>download cv</Button>
-                        <Button href="#" className='btn'>contact me</Button>
+                        
+                        <Link to="/contact">
+                            <Button href="#" className='btn'>contact me</Button>
+                        </Link>
+                        
 
                     </div>
                 </div>

@@ -52,6 +52,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body.hide-scrolling{
+  overflow-y: hidden;
+}
 body::before{
   content: '';
   position: fixed;

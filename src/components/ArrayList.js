@@ -40,11 +40,12 @@ export const experience = [
     },
 ]
 
-export const skills = ['html', 'css', 'javascript', 'bootstrap', 'react', 'figma', 'sass']
+export const skills = ['html', 'css', 'javascript', 'bootstrap', 'react', 'figma', 'sass', 'github']
 
 
 export const portfolio = [
     {
+        id:1,
         img:'https://picsum.photos/1200',
         alt:'title image',
         title:'education course website',
@@ -55,9 +56,10 @@ export const portfolio = [
         domain:'www.domain.com',
     },
     {
+        id:2,
         img:'https://picsum.photos/1200',
         alt:'title image',
-        title:'education course website',
+        title:'education 2',
         description:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni ipsum quisquam voluptas tempora praesentium, culpa molestias consequatur veniam, autem architecto iusto quae delectus! Facilis maiores expedita temporibus deleniti eum sint.',
         date:'4 Dec 2020',
         technology:'Html, css',
@@ -65,9 +67,10 @@ export const portfolio = [
         domain:'www.domain.com',
     },
     {
+        id:3,
         img:'https://picsum.photos/1200',
         alt:'title image',
-        title:'education course website',
+        title:'education 3',
         description:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni ipsum quisquam voluptas tempora praesentium, culpa molestias consequatur veniam, autem architecto iusto quae delectus! Facilis maiores expedita temporibus deleniti eum sint.',
         date:'4 Dec 2020',
         technology:'Html, css',
@@ -75,9 +78,10 @@ export const portfolio = [
         domain:'www.domain.com',
     },
     {
+        id:4,
         img:'https://picsum.photos/1200',
         alt:'title image',
-        title:'education course website',
+        title:'education 4',
         description:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni ipsum quisquam voluptas tempora praesentium, culpa molestias consequatur veniam, autem architecto iusto quae delectus! Facilis maiores expedita temporibus deleniti eum sint.',
         date:'4 Dec 2020',
         technology:'Html, css',
@@ -85,9 +89,10 @@ export const portfolio = [
         domain:'www.domain.com',
     },
     {
+        id:5,
         img:'https://picsum.photos/1200',
         alt:'title image',
-        title:'education course website',
+        title:'education 5',
         description:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni ipsum quisquam voluptas tempora praesentium, culpa molestias consequatur veniam, autem architecto iusto quae delectus! Facilis maiores expedita temporibus deleniti eum sint.',
         date:'4 Dec 2020',
         technology:'Html, css',
@@ -95,9 +100,10 @@ export const portfolio = [
         domain:'www.domain.com',
     },
     {
+        id:6,
         img:'https://picsum.photos/1200',
         alt:'title image',
-        title:'education course website',
+        title:'education 6',
         description:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni ipsum quisquam voluptas tempora praesentium, culpa molestias consequatur veniam, autem architecto iusto quae delectus! Facilis maiores expedita temporibus deleniti eum sint.',
         date:'4 Dec 2020',
         technology:'Html, css',

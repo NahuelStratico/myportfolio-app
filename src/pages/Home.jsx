@@ -2,11 +2,15 @@ import { Link } from "react-router-dom";
 import Button from '../components/styled'
 import './styles/home.css'
 import image from '../img/nahuel.png'
+import Header from '../components/header/Header'
 
 const Home = () => {
     return(
         // Main start
         <div className="main">
+
+            <Header />
+
             {/* Home section Start */}
             <section className='home-section align-item-center'>
                 <div className="container">
