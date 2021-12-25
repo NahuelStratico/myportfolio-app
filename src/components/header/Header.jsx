@@ -1,3 +1,4 @@
+import Nav from '../nav/Nav'
 import './header.css'
 
 const Header = () => {
@@ -8,6 +9,7 @@ const Header = () => {
                     <button type="button" className="nav-toggler">
                         <span></span>
                     </button>
+                    <Nav />
                 </div>
             </div>
         </header>
