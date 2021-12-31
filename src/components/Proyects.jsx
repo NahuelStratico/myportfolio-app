@@ -1,10 +1,8 @@
-import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../components/styled'
-import { portfolio } from '../components/ArrayList'
 
-const Proyects = ({openModal, data}) => {
 
+const Proyects = ({data}) => {
 
     return(
             data.map((item, index) => (
@@ -16,9 +14,6 @@ const Proyects = ({openModal, data}) => {
                     <Link to={`/proyect/${item.id}`}>
                        <Button>View more</Button> 
                     </Link>
-                    {/* <Button
-                        onClick={openModal}
-                    >view proyect</Button> */}
                 </div>
             ))
         

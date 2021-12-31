@@ -1,19 +1,19 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import '../../pages/styles/home.css'
 import './nav.css'
 
 const Nav = () => {
     return(
-        <div className="nav">
+        <nav className="nav">
             <div className="nav-inner">
                 <ul>
-                    <li><Link to="/" className='nav-item'>Home</Link></li>
-                    <li><Link to="/about" className='nav-item'>About</Link></li>
-                    <li><Link to="/portfolio" className='nav-item'>Portfolio</Link></li>
-                    <li><Link to="/contact" className='nav-item'>Contact</Link></li>
+                    <li><NavLink to="/" className='nav-item'>Home</NavLink></li>
+                    <li><NavLink to="/about" className='nav-item'>About</NavLink></li>
+                    <li><NavLink to="/portfolio" className='nav-item'>Portfolio</NavLink></li>
+                    <li><NavLink to="/contact" className='nav-item'>Contact</NavLink></li>
                 </ul>
             </div>
-        </div>
+        </nav>
     )
 }
 
