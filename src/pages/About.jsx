@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useSpring, animated } from 'react-spring'
 import Header from '../components/header/Header'
 import Nav from '../components/nav/Nav'
 import Education from '../components/Education'
@@ -12,9 +13,12 @@ import './styles/about.css'
 
 const About = () =>{
 
+    
     const [activeNav, setActiveNav] = useState(false)
     const [ education, setEducation ] = useState(true)
     const [ experience, setExperience ] = useState(false)
+    const styles = useSpring({to:{ opacity: activeNav ? 0 : 1 }})
+    const stylesNav = useSpring({to: { opacity: activeNav ? 1 : 0 }})
 
     const handleClickEd = () => {
         setEducation(true)
@@ -30,9 +34,9 @@ const About = () =>{
             <Header activeNav={activeNav} setActiveNav={setActiveNav}/>
 
             {
-                activeNav ? <Nav />
+                activeNav ? <Nav style={stylesNav}/>
                 :
-                <section className="about-section sec-padding">
+                <animated.section style={styles} className="about-section sec-padding">
                     <div className="container">
                         <div className="row">
                             <div className="section-title">
@@ -85,7 +89,7 @@ const About = () =>{
                             </div>
                         </div>
                     </div>
-                </section>
+                </animated.section>
             }
 
         </div>

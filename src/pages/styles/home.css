@@ -18,6 +18,9 @@ section{
     border-radius: 30px;
     backdrop-filter: var(--backdrop-filter-blur);
 }
+/* section.fade-out{
+    animation: fadeOut 0.5 ease-in-out forwards;
+} */
 .main{
     max-width: 1200px;
     margin: auto;
@@ -53,6 +56,17 @@ button{
     font-family: inherit;
     user-select: none;
 }
+
+/* Animation Keyframes */
+/* @keyframes fadeOut{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+} */
+
 /* Buttons */
 /* .btn{
     line-height: 1.5;

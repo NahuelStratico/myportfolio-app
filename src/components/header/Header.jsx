@@ -6,6 +6,7 @@ const Header = ({setActiveNav, activeNav}) => {
     const handleNAv = () => {
         setActiveNav(!activeNav)
     }
+    console.log(activeNav)
     
     return(
         <header className="header">
@@ -18,7 +19,6 @@ const Header = ({setActiveNav, activeNav}) => {
                         >
                         <span></span>
                     </button>
-                    {/* <Nav /> */}
                 </div>
             </div>
         </header>
