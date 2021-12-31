@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Button from '../components/styled'
+import { useSpring, animated } from 'react-spring'
 import { IoLogoGithub, IoLogoLinkedin, IoLogoInstagram } from 'react-icons/io5'
 import Header from '../components/header/Header'
 import Nav from '../components/nav/Nav'
@@ -9,16 +10,30 @@ import './styles/contact.css'
 const Contact = () => {
 
     const [activeNav, setActiveNav] = useState(false)
+    const stylesInitial = useSpring({
+        from:{ opacity: 0 },
+        config: { duration: 50 },
+        to: {opacity: 1 }
+    })
+    const styles = useSpring({
+        to:{ opacity: activeNav ? 0 : 1 },
+        leave:{ opacity: 0 }
+    })
+    const stylesNav = useSpring({
+        from:{ opacity: 0 },
+        to: { opacity: activeNav ? 1 : 0 },
+        leave:{ opacity: 0 }
+    })
 
     return(
-        <div className="main">
+        <animated.div style={stylesInitial} className="main">
 
             <Header activeNav={activeNav} setActiveNav={setActiveNav} />
 
             {
-                activeNav ? <Nav />
+                activeNav ? <Nav style={stylesNav}/>
                 :
-                <section className="contact-section sec-padding">
+                <animated.section style={styles} className="contact-section sec-padding">
                     <div className="container">
                         <div className="row">
                             <div className="section-title">
@@ -69,10 +84,10 @@ const Contact = () => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </animated.section>
             }
 
-        </div>
+        </animated.div>
     )
 }
 

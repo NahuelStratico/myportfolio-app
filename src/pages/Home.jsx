@@ -10,14 +10,26 @@ import Header from '../components/header/Header'
 const Home = () => {
 
     const [activeNav, setActiveNav] = useState(false)
-    const styles = useSpring({to:{ opacity: activeNav ? 0 : 1 }})
-    const stylesNav = useSpring({to: { opacity: activeNav ? 1 : 0 }})
+    const stylesInitial = useSpring({
+        from:{ opacity: 0 },
+        config: { duration: 50 },
+        to: {opacity: 1 }
+    })
+    const styles = useSpring({
+        to:{ opacity: activeNav ? 0 : 1 },
+        leave:{opacity: 0}
+    })
+    const stylesNav = useSpring({
+        from:{ opacity: 0 },
+        to: { opacity: activeNav ? 1 : 0 },
+        leave:{opacity: 0}
+    })
     
    
 
     return(
         // Main start
-        <div className="main">
+        <animated.div style={stylesInitial} className="main">
 
             <Header setActiveNav={setActiveNav} activeNav={activeNav}/>
 
@@ -45,7 +57,7 @@ const Home = () => {
                 </animated.section>
             }
 
-        </div>
+        </animated.div>
     )
 }
 

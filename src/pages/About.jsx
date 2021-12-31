@@ -17,8 +17,20 @@ const About = () =>{
     const [activeNav, setActiveNav] = useState(false)
     const [ education, setEducation ] = useState(true)
     const [ experience, setExperience ] = useState(false)
-    const styles = useSpring({to:{ opacity: activeNav ? 0 : 1 }})
-    const stylesNav = useSpring({to: { opacity: activeNav ? 1 : 0 }})
+    const stylesInitial = useSpring({
+        from:{ opacity: 0 },
+        config: { duration: 50 },
+        to: {opacity: 1 }
+    })
+    const styles = useSpring({
+        to:{ opacity: activeNav ? 0 : 1 },
+        leave:{ opacity: 0 }
+    })
+    const stylesNav = useSpring({
+        from:{ opacity: 0 },
+        to: { opacity: activeNav ? 1 : 0 },
+        leave:{ opacity: 0 }
+    })
 
     const handleClickEd = () => {
         setEducation(true)
@@ -30,7 +42,7 @@ const About = () =>{
     }
 
     return(
-        <div className="main">
+        <animated.div style={stylesInitial} className="main">
             <Header activeNav={activeNav} setActiveNav={setActiveNav}/>
 
             {
@@ -92,7 +104,7 @@ const About = () =>{
                 </animated.section>
             }
 
-        </div>
+        </animated.div>
         
     )
 }
