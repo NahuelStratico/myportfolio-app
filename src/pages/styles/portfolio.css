@@ -96,3 +96,23 @@ Pop up
     text-transform: lowercase;
     color: var(--main-color);
 }
+
+/* Responsive */
+@media (max-width: 991px){
+    .portfolio-item{
+        width: calc(50% - 30px);
+    }
+}
+@media (max-width: 767px){
+    .portfolio-item{
+        width: calc(100% - 30px);
+    }
+    .portfolio-popup .pp-inner{
+        padding: 30px 15px;
+    }
+}
+@media (max-width: 575px){
+    .pp-header h3{
+        font-size: 20px;
+    }
+}

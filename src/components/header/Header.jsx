@@ -6,10 +6,9 @@ const Header = ({setActiveNav, activeNav}) => {
     const handleNAv = () => {
         setActiveNav(!activeNav)
     }
-    console.log(activeNav)
     
     return(
-        <header className="header">
+        <header className={`header ${activeNav ? 'active' : ''} `}>
             <div className="container">
                 <div className="row flex-end">
                     <button 

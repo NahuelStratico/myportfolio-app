@@ -65,3 +65,19 @@
     color: var(--white);
     background-color: var(--main-color);
 }
+
+
+/* Responsive */
+@media (max-width: 767px){
+    .contact-form, 
+    .contact-info{
+        width: 100%;
+    }
+    .contact-info{
+        order: -1;
+        margin-bottom: 15px;
+    }
+    .contact-info-item{
+        padding: 0;
+    }
+}

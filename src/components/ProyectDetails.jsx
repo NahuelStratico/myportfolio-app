@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { IoClose } from 'react-icons/io5';
 import { portfolio } from './ArrayList'
 import Button from '../components/styled'
+import '../pages/styles/home.css'
 import '../pages/styles/portfolio.css'
 
 

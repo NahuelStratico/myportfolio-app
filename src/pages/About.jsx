@@ -19,7 +19,7 @@ const About = () =>{
     const [ experience, setExperience ] = useState(false)
     const stylesInitial = useSpring({
         from:{ opacity: 0 },
-        config: { duration: 50 },
+        config: { duration: 200 },
         to: {opacity: 1 }
     })
     const styles = useSpring({
@@ -91,8 +91,9 @@ const About = () =>{
                                 
                                 {experience ? <Experience /> : null}
 
-
-                                <Button href="#" className='btn'>download cv</Button>
+                                <Link to="../">
+                                    <Button className='btn'>download cv</Button>
+                                </Link>
                                 
                                 <Link to="/contact">
                                     <Button href="#" className='btn'>contact me</Button>

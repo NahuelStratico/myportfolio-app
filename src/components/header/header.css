@@ -28,6 +28,10 @@
     width: 24px;
     background-color: var(--main-color);
     position: relative;
+    transition: background-color 0.3s ease;
+}
+.header.active .nav-toggler span{
+    background-color: transparent;
 }
 .header .nav-toggler span::before,
 .header .nav-toggler span::after{
@@ -43,11 +47,17 @@
     left: 0;
     transform: translateY(-8px);
 }
+.header.active .nav-toggler span::before{
+    transform: rotate(45deg);
+}
 .header .nav-toggler span::after{
     right: 0;
     transform: translateY(8px);
 }
-.header .nav-toggler:hover span::before,
-.header .nav-toggler:hover span::after{
+.header.active .nav-toggler span::after{
+    transform: rotate(-45deg);
+}
+.header:not(.active) .nav-toggler:hover span::before,
+.header:not(.active) .nav-toggler:hover span::after{
     width: 50%;
 }

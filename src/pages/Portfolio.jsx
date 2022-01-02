@@ -12,7 +12,7 @@ const Portfolio = ({data}) => {
     const [activeNav, setActiveNav] = useState(false)
     const stylesInitial = useSpring({
         from:{ opacity: 0 },
-        config: { duration: 50 },
+        config: { duration: 200 },
         to: {opacity: 1 }
     })
     const styles = useSpring({
