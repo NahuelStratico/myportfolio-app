@@ -8,6 +8,7 @@ import Experience from '../components/Experience'
 import { skills } from '../components/ArrayList'
 import Button from '../components/styled'
 import image from '../img/nahuel.png'
+import cv from '../img/cv-nahuel-stratico.pdf'
 import './styles/home.css'
 import './styles/about.css'
 
@@ -15,8 +16,8 @@ const About = () =>{
 
     
     const [activeNav, setActiveNav] = useState(false)
-    const [ education, setEducation ] = useState(true)
-    const [ experience, setExperience ] = useState(false)
+    const [ education, setEducation ] = useState(false)
+    const [ experience, setExperience ] = useState(true)
     const stylesInitial = useSpring({
         from:{ opacity: 0 },
         config: { duration: 200 },
@@ -62,7 +63,10 @@ const About = () =>{
                                 </div>
                             </div>
                             <div className="about-text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptatibus nemo amet officiis aliquam molestiae harum ratione veniam maxime distinctio quis minus minima quisquam expedita, reiciendis laboriosam nesciunt quos tempore esse ipsam accusantium sequi? Repudiandae quos, id dolorem, laborum vitae sed accusamus a labore nobis maxime veritatis quisquam, reiciendis illo.</p>
+                                <p>I am Frontend developer with three years of freelance experience. My focus is in React.
+                                <br />
+                                I'm very interested in learning more about technology and adding experience in the are of web development and mobile.
+                                I am passionate about challenges, learning and working as a team.</p>
                                 <h3>Skills</h3>
                                 <div className="skills">
                                     {
@@ -78,20 +82,28 @@ const About = () =>{
                                 <div className="about-tabs">
                                     <button 
                                         type="button" 
+                                        className={`tab-item ${experience ? "active" : ""}`} 
+                                        data-target="#experience" onClick={handleClickEx}
+                                        >
+                                        experience
+                                    </button>
+                                    <button 
+                                        type="button" 
                                         className={`tab-item ${education ? "active" : ""}`}
                                         data-target="#education"
                                         onClick={handleClickEd}
                                         >
-                                            education</button>
-                                    <button type="button" className={`tab-item ${experience ? "active" : ""}`} data-target="#experience" onClick={handleClickEx}>experience</button>
+                                            education
+                                    </button>
                                 </div>
 
                                 
-                                {education ? <Education /> : null}
-                                
                                 {experience ? <Experience /> : null}
 
-                                <Link to="../">
+                                {education ? <Education /> : null}
+                                
+
+                                <Link to={cv} target="_blank">
                                     <Button className='btn'>download cv</Button>
                                 </Link>
                                 

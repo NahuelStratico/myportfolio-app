@@ -1,42 +1,42 @@
 export const education = [
     {
-        date: '2013 - 2016',
-        course: 'bacher of technology',
-        institute: 'Todfod university',
-        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione perspiciatis dolorum at dolore ab.'
+        date: '2020 - 2021',
+        course: 'React JS',
+        institute: 'Coderhouse',
+        description: 'JSX, APIs, Hooks, React Router Dom, Context, Firebase.'
     },
     {
-        date: '2013 - 2016',
-        course: 'bacher of technology',
-        institute: 'Todfod university',
-        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione perspiciatis dolorum at dolore ab.'
+        date: '2019 - 2020',
+        course: 'Web Developer FullStack',
+        institute: 'Acamica',
+        description: 'Html, Css, Sass, Javascript, Node Js, SQL, Mongo DB, APIs, Firebase.'
     },
     {
-        date: '2013 - 2016',
-        course: 'bacher of technology',
-        institute: 'Todfod university',
-        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione perspiciatis dolorum at dolore ab.'
+        date: '2012 - 2014',
+        course: 'Graphic Design',
+        institute: 'UBA',
+        description: 'career incomplete'
     }
 ]
 
 export const experience = [
     {
-        date: '2013 - 2016',
-        role: 'web developer',
-        company: 'Todfod university',
-        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione perspiciatis dolorum at dolore ab.',
+        date: '2021 - in role',
+        role: 'web development course teacher',
+        company: 'Coderhouse',
+        description: 'Tutor and teacher, teaching technologies like Html, Css, Sass, Bootstrap and Git.',
     },
     {
-        date: '2013 - 2016',
+        date: '2019 - in role',
         role: 'web developer',
-        company: 'Todfod university',
-        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione perspiciatis dolorum at dolore ab.',
+        company: 'Freelance',
+        description: 'Web developer of business',
     },
     {
-        date: '2013 - 2016',
-        role: 'web developer',
-        company: 'Todfod university',
-        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione perspiciatis dolorum at dolore ab.',
+        date: '2019 - 2019',
+        role: 'web developer Volunteering',
+        company: 'Estrateguia didactica',
+        description: 'In this company I worked with wordpress technology and Html, Css, Bootstrap.',
     },
 ]
 

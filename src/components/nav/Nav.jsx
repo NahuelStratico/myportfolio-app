@@ -4,6 +4,8 @@ import '../../pages/styles/home.css'
 import './nav.css'
 
 const Nav = ({style}) => {
+
+
     return(
         <nav className="nav">
             <animated.div style={style} className="nav-inner">

@@ -10,6 +10,7 @@ import Header from '../components/header/Header'
 const Home = () => {
 
     const [activeNav, setActiveNav] = useState(false)
+
     const stylesInitial = useSpring({
         from:{ opacity: 0 },
         config: { duration: 200 },
@@ -25,39 +26,40 @@ const Home = () => {
         leave:{opacity: 0}
     })
     
-   
+    
 
     return(
         // Main start
-        <animated.div style={stylesInitial} className="main">
+            <animated.div style={stylesInitial} className="main">
 
-            <Header setActiveNav={setActiveNav} activeNav={activeNav}/>
+                <Header setActiveNav={setActiveNav} activeNav={activeNav}/>
 
-            {
-                activeNav ? <Nav style={stylesNav} /> 
-                : 
-                <animated.section style={styles} className='home-section align-item-center'>
-                    <div className="container">
-                        <div className="row align-item-center">
-                            <div className="home-text">
-                                <p>Hello, I'm</p>
-                                <h1>Nahuel Stratico</h1>
-                                <h2>Frontend web developer</h2>
-  
-                                <Link className='btn' to="/about"><Button>More about me</Button></Link>
-                                <Link className='btn' to="/portfolio"><Button>portfolio</Button></Link>
-                            </div>
-                            <div className="home-img">
-                                <div className="img-box">
-                                    <img src={image} alt="profile-img" />
+                {
+                    activeNav ? <Nav style={stylesNav}/> 
+                    : 
+                    <animated.section style={styles} className='home-section align-item-center'>
+                        <div className="container">
+                        
+                                <div className="row align-item-center">
+                                        <div className="home-text">
+                                            <p>Hello, I'm</p>
+                                            <h1>Nahuel Stratico</h1>
+                                            <h2>Frontend web developer</h2>
+            
+                                            <Link className='btn' to="/about"><Button>More about me</Button></Link>
+                                            <Link className='btn' to="/portfolio"><Button>portfolio</Button></Link>
+                                        </div>
+                                        <div className="home-img">
+                                            <div className="img-box">
+                                                <img src={image} alt="profile-img" />
+                                            </div>
+                                        </div>
                                 </div>
-                            </div>
+                            
                         </div>
-                    </div>
-                </animated.section>
-            }
-
-        </animated.div>
+                    </animated.section>
+                }
+            </animated.div>
     )
 }
 

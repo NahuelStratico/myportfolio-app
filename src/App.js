@@ -4,20 +4,23 @@ import About from './pages/About'
 import Portfolio from "./pages/Portfolio"
 import Proyect from "./pages/Proyect"
 import Contact from './pages/Contact'
+import gotta from './img/web-gotta.jpg'
 
 
 function App() {
+
   const portfolio = [
     {
         id:1,
-        img:'https://picsum.photos/1000/562',
-        alt:'title image',
-        title:'education course website',
+        img:`${gotta}`,
+        alt:'Luciana Gotta',
+        title:'Arq. Luciana Gotta',
         description:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni ipsum quisquam voluptas tempora praesentium, culpa molestias consequatur veniam, autem architecto iusto quae delectus! Facilis maiores expedita temporibus deleniti eum sint.',
-        date:'4 Dec 2020',
-        technology:'Html, css',
+        date:'4 Ago 2021',
+        technology:'Html, Css, Javascript, Bootstrap, PHP',
         role:'Frontend',
-        domain:'www.domain.com',
+        url:'http://lucianagotta.com.ar/',
+        domain:'lucianagotta.com.ar',
     },
     {
         id:2,
