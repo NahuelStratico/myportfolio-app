@@ -65,6 +65,19 @@
     color: var(--white);
     background-color: var(--main-color);
 }
+.submit-btn{
+    position: relative;
+}
+.reset_btn{
+    background: none;
+    border: none;
+    color: none;
+    cursor: pointer;
+}
+.reset_btn:hover{
+    color: var(--white);
+    scale: 0;
+}
 
 
 /* Responsive */

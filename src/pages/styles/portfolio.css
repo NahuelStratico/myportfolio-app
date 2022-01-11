@@ -10,11 +10,13 @@
     background-color: var(--white-alpha-25);
     border: 1px solid var(--white-alpha-40);
     border-radius: 10px;
+    
 }
 .portfolio-item-thumbnail img{
     width: 100%;
-    height: auto;
+    height: 200px;
     border-radius: 10px;
+    object-fit: cover;
 }
 .portfolio-item-title{
     font-size: 20px;
@@ -49,8 +51,6 @@ Pop up
     width: 100%;
     border: 1px solid var(--white-alpha-40);
     backdrop-filter: var(--backdrop-filter-blur);
-    /* opacity: 0;
-    transform: scale(0.9); */
 }
 .portfolio-popup.open .pp-content{
     opacity: 1;

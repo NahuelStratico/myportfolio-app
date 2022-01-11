@@ -31,7 +31,7 @@ const Portfolio = ({data}) => {
             <Header activeNav={activeNav} setActiveNav={setActiveNav}/>
 
             {
-                activeNav ? <Nav style={stylesNav}/>
+                activeNav ? <Nav style={stylesNav} setActiveNav={setActiveNav} />
                 :
                 <animated.section style={styles} className="portfolio-section sec-padding">
                     <div className="container">

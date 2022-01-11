@@ -35,7 +35,7 @@ const Home = () => {
                 <Header setActiveNav={setActiveNav} activeNav={activeNav}/>
 
                 {
-                    activeNav ? <Nav style={stylesNav}/> 
+                    activeNav ? <Nav style={stylesNav}  setActiveNav={setActiveNav}/> 
                     : 
                     <animated.section style={styles} className='home-section align-item-center'>
                         <div className="container">

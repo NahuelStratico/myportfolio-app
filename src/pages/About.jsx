@@ -47,7 +47,7 @@ const About = () =>{
             <Header activeNav={activeNav} setActiveNav={setActiveNav}/>
 
             {
-                activeNav ? <Nav style={stylesNav}/>
+                activeNav ? <Nav style={stylesNav} setActiveNav={setActiveNav} />
                 :
                 <animated.section style={styles} className="about-section sec-padding">
                     <div className="container">
@@ -104,11 +104,15 @@ const About = () =>{
                                 
 
                                 <Link to={cv} target="_blank">
-                                    <Button className='btn'>download cv</Button>
+                                    <Button className='btn'>
+                                        download cv
+                                    </Button>
                                 </Link>
                                 
                                 <Link to="/contact">
-                                    <Button href="#" className='btn'>contact me</Button>
+                                    <Button href="#" className='btn'>
+                                        contact me
+                                    </Button>
                                 </Link>
                                 
                             </div>

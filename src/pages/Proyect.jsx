@@ -1,9 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
-// import { portfolio } from '../components/ArrayList'
-// import { IoClose } from 'react-icons/io5';
 import { IoArrowBack } from 'react-icons/io5'
 import Button from '../components/styled';
-import '../components/modal/modal.css'
 
 const Proyect = ({data}) => {
 
@@ -37,7 +34,7 @@ const Proyect = ({data}) => {
                                             <li>Created - <span>{item.date}</span> </li>
                                             <li>technology used - <span>{item.technology}</span> </li>
                                             <li>Role - <span>{item.role}</span> </li>
-                                            <li>View Online - <span><a href="#" target="_blank">{item.domain}</a></span> </li>
+                                            <li>View Online - <span><a href={item.pathname} target="_blank">{item.domain}</a></span> </li>
                                         </ul>
                                     </div>
                                 </div>

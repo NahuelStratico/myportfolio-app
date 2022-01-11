@@ -5,6 +5,7 @@ import Portfolio from "./pages/Portfolio"
 import Proyect from "./pages/Proyect"
 import Contact from './pages/Contact'
 import gotta from './img/web-gotta.jpg'
+import giargia from './img/web-giargia.jpg'
 
 
 function App() {
@@ -17,21 +18,22 @@ function App() {
         title:'Arq. Luciana Gotta',
         description:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni ipsum quisquam voluptas tempora praesentium, culpa molestias consequatur veniam, autem architecto iusto quae delectus! Facilis maiores expedita temporibus deleniti eum sint.',
         date:'4 Ago 2021',
-        technology:'Html, Css, Javascript, Bootstrap, PHP',
+        technology:'Figma, Html, Css, Javascript, Bootstrap, PHP',
         role:'Frontend',
-        url:'http://lucianagotta.com.ar/',
+        pathname:'http://lucianagotta.com.ar/',
         domain:'lucianagotta.com.ar',
     },
     {
         id:2,
-        img:'https://picsum.photos/1200',
-        alt:'title image',
-        title:'education 2',
+        img:`${giargia}`,
+        alt:'giargia construcciones',
+        title:'giargia construcciones',
         description:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni ipsum quisquam voluptas tempora praesentium, culpa molestias consequatur veniam, autem architecto iusto quae delectus! Facilis maiores expedita temporibus deleniti eum sint.',
         date:'4 Dec 2020',
-        technology:'Html, css',
+        technology:'Figma, Html, Css, Javascript, Bootstrap, PHP',
         role:'Frontend',
-        domain:'www.domain.com',
+        pathname:'https://www.giargiaconstrucciones.com.ar/',
+        domain:'giargiaconstrucciones.com.ar',
     },
     {
         id:3,
