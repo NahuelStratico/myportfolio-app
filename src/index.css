@@ -17,7 +17,10 @@ Variables
   --white:#ffffff;
   --white-alpha-40: rgba(255, 255, 255, 0.40);
   --white-alpha-25: rgba(255, 255, 255, 0.25);
+  --dark-alpha:rgba(221, 11, 211, 0.911);
   --backdrop-filter-blur: blur(5px);
+  --dark-mode: #121212;
+  --green-dark:#03DAC5;
 }
 
 
@@ -36,7 +39,21 @@ Variables
   box-sizing: border-box;
 
 }
-body {
+.body-dark{
+  background: var(--dark-mode);
+  color: var(--white);
+  min-height: 100vh;
+  background-attachment: fixed;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  color: var(--blue-dark);
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  padding: 35px 15px;
+}
+.body {
   min-height: 100vh;
   background-image: linear-gradient(to bottom right, var(--pink-light), var(--cyan-light));
   background-attachment: fixed;
@@ -52,10 +69,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body.hide-scrolling{
+.body.hide-scrolling{
   overflow-y: hidden;
 }
-body::before{
+.body::before{
   content: '';
   position: fixed;
   left: 0;

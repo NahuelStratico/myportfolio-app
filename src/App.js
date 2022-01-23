@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {Helmet} from "react-helmet";
+
 import Home from './pages/Home'
 import About from './pages/About'
 import Portfolio from "./pages/Portfolio"
@@ -8,15 +9,27 @@ import Contact from './pages/Contact'
 import gotta from './img/web-gotta.jpg'
 import giargia from './img/web-giargia.jpg'
 import portfolioImg from './img/portfolio.jpg'
+import memojpg from './img/memo.jpg'
 import favicon from '../src/img/favicon.ico';
-
 
 
 function App() {
 
   const portfolio = [
     {
-        id:1,
+      id:1,
+      img:`${memojpg}`,
+      alt:'Nahuel Stratico',
+      title:'Game Memotest',
+      description:'Applying some logic, props, and hooks.',
+      date:'Jan 2022',
+      technology:'React, JSX, Hooks, Javascript, Css, Html. ',
+      role:'Frontend',
+      pathname:'https://github.com/NahuelStratico/memoapp',
+      domain:'Github.com/NahuelStratico',
+    },
+    {
+        id:2,
         img:`${portfolioImg}`,
         alt:'Nahuel Stratico',
         title:'My portfolio',
@@ -28,7 +41,7 @@ function App() {
         domain:'Github.com/NahuelStratico',
     },
     {
-      id:2,
+      id:3,
       img:`${gotta}`,
       alt:'Luciana Gotta',
       title:'Arq. Luciana Gotta',
@@ -40,16 +53,16 @@ function App() {
       domain:'lucianagotta.com.ar',
     },
     {
-        id:3,
-        img:`${giargia}`,
-        alt:'giargia construcciones',
-        title:'giargia construcciones',
-        description:'Updated website. The construction company was looking for a new design for its website and a new image for its company.',
-        date:'Dec 2020',
-        technology:'Figma, Html, Css, Javascript, Bootstrap, PHP.',
-        role:'Frontend',
-        pathname:'https://www.giargiaconstrucciones.com.ar/',
-        domain:'giargiaconstrucciones.com.ar',
+      id:4,
+      img:`${giargia}`,
+      alt:'giargia construcciones',
+      title:'giargia construcciones',
+      description:'Updated website. The construction company was looking for a new design for its website and a new image for its company.',
+      date:'Dec 2020',
+      technology:'Figma, Html, Css, Javascript, Bootstrap, PHP.',
+      role:'Frontend',
+      pathname:'https://www.giargiaconstrucciones.com.ar/',
+      domain:'giargiaconstrucciones.com.ar',
     },
   ]
 

@@ -1,7 +1,12 @@
 // import Nav from '../nav/Nav'
+import { useContext } from 'react';
+import { ThemeContext } from '../ThemeContext';
+
 import './header.css'
 
 const Header = ({setActiveNav, activeNav}) => {
+
+    const { darkMode } = useContext(ThemeContext)
 
     const handleNAv = () => {
         setActiveNav(!activeNav)
@@ -13,10 +18,10 @@ const Header = ({setActiveNav, activeNav}) => {
                 <div className="row flex-end">
                     <button 
                         type="button" 
-                        className="nav-toggler"
+                        className={ darkMode ? 'nav-toggler dark': "nav-toggler"}
                         onClick={handleNAv}
                         >
-                        <span></span>
+                        <span className={ darkMode ? 'span dark': 'span'}></span>
                     </button>
                 </div>
             </div>

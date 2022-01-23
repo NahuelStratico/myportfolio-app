@@ -71,6 +71,10 @@ Pop up
     right: -40px;
     top: -40px;
 }
+.pp-thumbnail{
+    display: flex;
+    justify-content: center;
+}
 .pp-thumbnail img{
     border-radius: 10px;
 }

@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import { IoArrowBack } from 'react-icons/io5'
 import Button from '../components/styled';
+import './styles/portfolio.css'
 
 const Proyect = ({data}) => {
 

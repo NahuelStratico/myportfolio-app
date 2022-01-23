@@ -1,8 +1,21 @@
 a{
     text-decoration: none;
 }
-h1,h2{
+.p{
+    font-family: 'Poppins', sans-serif;
+}
+.p-dark{
+   font-family: 'Poppins', sans-serif;  
+   color: var(--white);
+}
+.h1,.h2{
     font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+.h1-dark,.h2-dark{
+    color: var(--white);
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
 }
 h3,h4,h5,h6{
     font-weight: 500;
@@ -62,7 +75,7 @@ button{
 
 
 /* Buttons */
-/* .btn{
+.btn{
     line-height: 1.5;
     background-color: var(--white-alpha-25);
     border: 1pz solid var(--white-alpha-40);
@@ -97,10 +110,16 @@ button{
 }
 .btn:hover{
     color: var(--white);
-} */
-.btn{
+}
+.btn, .btn-dark{
     display: inline-block;
 }
+
+.btn.dark{
+    background-color: var(--green-dark);
+    color: var(--white);
+}
+
 /* --------------
 Home 
 -----------------*/
@@ -136,7 +155,19 @@ Home
     border: 8px solid var(--white-alpha-25);
     margin: auto;
 }
+.home-img .img-box-dark{
+    max-width: 360px;
+    /* background-color: var(--white-alpha-25); */
+    background-color: var(--white-alpha-25);
+    border-radius: 50%;
+    border: 8px solid var(--green-dark);
+    margin: auto;
+}
 .home-img .img-box img{
+    width: 100%;
+    border-radius: 50%;
+}
+.home-img .img-box-dark img{
     width: 100%;
     border-radius: 50%;
 }

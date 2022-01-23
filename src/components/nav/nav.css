@@ -39,6 +39,9 @@
     transition: color 0.3s ease;
     position: relative;
 }
+.nav-item.dark{
+    color: var(--white);
+}
 .nav-item::before{
     content: '';
     position: absolute;
@@ -55,6 +58,9 @@
 }
 .nav-item:hover{
     color: var(--main-color);
+}
+.nav-item.dark:hover{
+    color: var(--green-dark)
 }
 
 @media(max-width:575px){
