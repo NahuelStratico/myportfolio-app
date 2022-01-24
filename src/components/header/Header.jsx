@@ -7,6 +7,7 @@ import './header.css'
 const Header = ({setActiveNav, activeNav}) => {
 
     const { darkMode } = useContext(ThemeContext)
+    const theme = JSON.parse(localStorage.getItem('theme'));
 
     const handleNAv = () => {
         setActiveNav(!activeNav)
@@ -18,10 +19,10 @@ const Header = ({setActiveNav, activeNav}) => {
                 <div className="row flex-end">
                     <button 
                         type="button" 
-                        className={ darkMode ? 'nav-toggler dark': "nav-toggler"}
+                        className={ theme ? 'nav-toggler dark': "nav-toggler"}
                         onClick={handleNAv}
                         >
-                        <span className={ darkMode ? 'span dark': 'span'}></span>
+                        <span className={ theme ? 'span dark': 'span'}></span>
                     </button>
                 </div>
             </div>

@@ -155,13 +155,8 @@ Home
     border: 8px solid var(--white-alpha-25);
     margin: auto;
 }
-.home-img .img-box-dark{
-    max-width: 360px;
-    /* background-color: var(--white-alpha-25); */
-    background-color: var(--white-alpha-25);
-    border-radius: 50%;
+.home-img .img-box.dark{
     border: 8px solid var(--green-dark);
-    margin: auto;
 }
 .home-img .img-box img{
     width: 100%;
