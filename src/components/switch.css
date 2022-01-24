@@ -1,4 +1,28 @@
-.icon-theme{
-    font-size: 2rem;
+.switch{
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 30%;
+    z-index: 1;
+    padding: 30px 30px 0;
+}
+.icon-theme-moon{
+    font-size: 2.5rem;
     cursor: pointer;
+    color: #4B4453;
+    /* color: var(--dark); */
+}
+.icon-theme-sun{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--cyan-light);
+}
+
+@media(max-width:575px){
+    .switch{
+        padding: 30px 10px 0;
+    }
 }

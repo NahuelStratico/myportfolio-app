@@ -39,10 +39,6 @@ Variables
   box-sizing: border-box;
 
 }
-.body.dark{
-  background: var(--dark-mode);
-  color: var(--white);
-}
 .body {
   min-height: 100vh;
   background-image: linear-gradient(to bottom right, var(--pink-light), var(--cyan-light));
@@ -55,9 +51,13 @@ Variables
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
   padding: 35px 15px;
-  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.body.dark{
+  background: var(--dark-mode);
+  color: var(--white);
+  transition: 0.4s all ease-in;
 }
 .body.hide-scrolling{
   overflow-y: hidden;

@@ -40,18 +40,18 @@ const Home = () => {
             <animated.div style={stylesInitial} className="main">
                
                 <Header setActiveNav={setActiveNav} activeNav={activeNav}/>
-               
+                <Switch />
                 {
                     activeNav ? <Nav style={stylesNav}  setActiveNav={setActiveNav}/> 
                     : 
                     <animated.section style={styles} className='home-section align-item-center'>
                         <div className="container">
-                        <Switch />
+                        
                                 <div className="row align-item-center">
                                         <div className="home-text">
-                                            <p className={theme? 'p-dark' : 'p'}>Hello, I'm</p>
-                                            <h1 className={theme? 'h1-dark' : 'h1'}>Nahuel Stratico</h1>
-                                            <h2 className={theme? 'h2-dark' : 'h2'}>Frontend web developer</h2>
+                                            <p className={theme? 'p dark' : 'p'}>Hello, I'm</p>
+                                            <h1 className={theme? 'h1 dark' : 'h1'}>Nahuel Stratico</h1>
+                                            <h2 className={theme? 'h2 dark' : 'h2'}>Frontend web developer</h2>
             
                                             <Link className={ theme ? 'btn dark' : 'btn'} to="/about">  
                                                    More about me                                        

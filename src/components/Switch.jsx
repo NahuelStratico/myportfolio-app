@@ -14,16 +14,16 @@ const Switch = () => {
 
     const handleTheme = () => {
         setDarkMode(!darkMode)
-        const theme = localStorage.setItem('theme', JSON.stringify(darkMode))
+        localStorage.setItem('theme', JSON.stringify(darkMode))
     }
     return(
-        <>
+        <div className='switch'>
             {
-                themeStorage ? <IoSunny onClick={handleTheme} className='icon-theme'/>
+                themeStorage ? <IoSunny onClick={handleTheme} className='icon-theme-sun'/>
                 :
-                <IoMoon onClick={handleTheme} className='icon-theme'/>
+                <IoMoon onClick={handleTheme} className='icon-theme-moon'/>
             }
-        </>
+        </div>
     )
 }
 

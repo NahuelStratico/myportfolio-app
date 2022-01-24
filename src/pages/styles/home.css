@@ -4,18 +4,17 @@ a{
 .p{
     font-family: 'Poppins', sans-serif;
 }
-.p-dark{
-   font-family: 'Poppins', sans-serif;  
+.p.dark{
    color: var(--white);
 }
 .h1,.h2{
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
 }
-.h1-dark,.h2-dark{
+.h1.dark,.h2.dark{
     color: var(--white);
-    font-weight: 600;
     font-family: 'Poppins', sans-serif;
+    
 }
 h3,h4,h5,h6{
     font-weight: 500;
@@ -118,6 +117,7 @@ button{
 .btn.dark{
     background-color: var(--green-dark);
     color: var(--white);
+    transition: 0.4s all ease-in;
 }
 
 /* --------------
@@ -154,17 +154,21 @@ Home
     border-radius: 50%;
     border: 8px solid var(--white-alpha-25);
     margin: auto;
+    transition: 0.4s all ease-in;
 }
 .home-img .img-box.dark{
     border: 8px solid var(--green-dark);
+    
 }
 .home-img .img-box img{
     width: 100%;
     border-radius: 50%;
+    transition: 0.4s all ease-in;
 }
 .home-img .img-box-dark img{
     width: 100%;
     border-radius: 50%;
+    
 }
 
 /* Responsive */
