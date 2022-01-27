@@ -2,7 +2,7 @@ import { useState, useContext } from 'react'
 import { Link } from "react-router-dom";
 // import Button from '../components/styled'
 import { useSpring, animated } from 'react-spring'
-import { ThemeContext } from '../components/ThemeContext'
+import ThemeContext from '../components/Context/ThemeContext';
 
 
 import Nav from '../components/nav/Nav'
@@ -14,8 +14,7 @@ import Switch from '../components/Switch'
 const Home = () => {
 
     const [activeNav, setActiveNav] = useState(false)
-    const { darkMode } = useContext(ThemeContext)
-    const theme = JSON.parse(localStorage.getItem('theme'));
+    const { theme } = useContext(ThemeContext)
 
     const stylesInitial = useSpring({
         from:{ opacity: 0 },

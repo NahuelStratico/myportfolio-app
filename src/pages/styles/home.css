@@ -154,7 +154,6 @@ Home
     border-radius: 50%;
     border: 8px solid var(--white-alpha-25);
     margin: auto;
-    transition: 0.4s all ease-in;
 }
 .home-img .img-box.dark{
     border: 8px solid var(--green-dark);

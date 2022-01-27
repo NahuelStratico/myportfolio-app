@@ -1,6 +1,6 @@
 // import Nav from '../nav/Nav'
 import { useContext } from 'react';
-import { ThemeContext } from '../ThemeContext';
+import ThemeContext from '../Context/ThemeContext';
 
 import './header.css'
 

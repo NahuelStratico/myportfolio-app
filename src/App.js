@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {Helmet} from "react-helmet";
+import ThemeProvider from './components/Context/Provider';
 
 import Home from './pages/Home'
 import About from './pages/About'
@@ -75,15 +76,20 @@ function App() {
         <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
         <meta name="description" content="By Nahuel Stratico portfolio" />
     </Helmet>
-     <BrowserRouter>
-        <Routes>
-            <Route exact path="/" element={ <Home /> } />
-            <Route path="/about" element={ <About /> } />
-            <Route path="/portfolio" element={ <Portfolio data={portfolio}/> } />
-            <Route path="/proyect/:id" element={ <Proyect data={portfolio}/> } />
-            <Route path="/contact" element={ <Contact /> } />
-        </Routes>
+
+    
+      <BrowserRouter>
+        <ThemeProvider>
+          <Routes>
+              <Route exact path="/" element={ <Home /> } />
+              <Route path="/about" element={ <About /> } />
+              <Route path="/portfolio" element={ <Portfolio data={portfolio}/> } />
+              <Route path="/proyect/:id" element={ <Proyect data={portfolio}/> } />
+              <Route path="/contact" element={ <Contact /> } />
+          </Routes>
+        </ThemeProvider>
       </BrowserRouter>
+    
     </>
   );
 }

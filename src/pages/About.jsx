@@ -1,10 +1,14 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { useSpring, animated } from 'react-spring'
+import ThemeContext from '../components/Context/ThemeContext';
+
 import Header from '../components/header/Header'
 import Nav from '../components/nav/Nav'
 import Education from '../components/Education'
 import Experience from '../components/Experience'
+
+import Switch from '../components/Switch'
 import { skills } from '../components/ArrayList'
 import Button from '../components/styled'
 import image from '../img/nahuel.png'
@@ -14,10 +18,13 @@ import './styles/about.css'
 
 const About = () =>{
 
+    const { darkMode, theme } = useContext(ThemeContext);
     
     const [activeNav, setActiveNav] = useState(false)
     const [ education, setEducation ] = useState(false)
     const [ experience, setExperience ] = useState(true)
+
+
     const stylesInitial = useSpring({
         from:{ opacity: 0 },
         config: { duration: 200 },
@@ -43,87 +50,90 @@ const About = () =>{
     }
 
     return(
-        <animated.div style={stylesInitial} className="main">
-            <Header activeNav={activeNav} setActiveNav={setActiveNav}/>
+        <div className={theme ? 'body dark': 'body'}>
+            <animated.div style={stylesInitial} className="main">
 
-            {
-                activeNav ? <Nav style={stylesNav} setActiveNav={setActiveNav} />
-                :
-                <animated.section style={styles} className="about-section sec-padding">
-                    <div className="container">
-                        <div className="row">
-                            <div className="section-title">
-                                <h2>about me</h2>
+                <Header activeNav={activeNav} setActiveNav={setActiveNav}/>
+                <Switch />
+
+                {
+                    activeNav ? <Nav style={stylesNav} setActiveNav={setActiveNav} />
+                    :
+                    <animated.section style={styles} className="about-section sec-padding">
+                        <div className="container">
+                            <div className="row">
+                                <div className="section-title">
+                                    <h2>about me</h2>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="about-img">
+                                    <div className="img-box">
+                                        <img src={image} alt="about img" />
+                                    </div>
+                                </div>
+                                <div className="about-text">
+                                    <p>I am Frontend developer with three years of freelance experience. My focus is in React.
+                                    <br />
+                                    I'm very interested in learning more about technology and adding experience in the are of web development and mobile.
+                                    I am passionate about challenges, learning and working as a team.</p>
+                                    <h3>Skills</h3>
+                                    <div className="skills">
+                                        {
+                                                skills.map((item, index) => (
+                                                    <div className="skill-item" key={index}>
+                                                        {item}
+                                                    </div>
+                                                ))
+                                            
+                                        }
+                                    </div>
+
+                                    <div className="about-tabs">
+                                        <button 
+                                            type="button" 
+                                            className={`tab-item ${experience ? "active" : ""}`} 
+                                            data-target="#experience" onClick={handleClickEx}
+                                            >
+                                            experience
+                                        </button>
+                                        <button 
+                                            type="button" 
+                                            className={`tab-item ${education ? "active" : ""}`}
+                                            data-target="#education"
+                                            onClick={handleClickEd}
+                                            >
+                                                education
+                                        </button>
+                                    </div>
+
+                                    
+                                    {experience ? <Experience /> : null}
+
+                                    {education ? <Education /> : null}
+                                    
+
+                                    <Link to={cv} target="_blank">
+                                        <Button className='btn'>
+                                            download cv
+                                        </Button>
+                                    </Link>
+                                    
+                                    <Link to="/contact">
+                                        <Button href="#" className='btn'>
+                                            contact me
+                                        </Button>
+                                    </Link>
+                                    
+                                </div>
                             </div>
                         </div>
-                        <div className="row">
-                            <div className="about-img">
-                                <div className="img-box">
-                                    <img src={image} alt="about img" />
-                                </div>
-                            </div>
-                            <div className="about-text">
-                                <p>I am Frontend developer with three years of freelance experience. My focus is in React.
-                                <br />
-                                I'm very interested in learning more about technology and adding experience in the are of web development and mobile.
-                                I am passionate about challenges, learning and working as a team.</p>
-                                <h3>Skills</h3>
-                                <div className="skills">
-                                    {
-                                            skills.map((item, index) => (
-                                                <div className="skill-item" key={index}>
-                                                    {item}
-                                                </div>
-                                            ))
-                                        
-                                    }
-                                </div>
+                    </animated.section>
+                }
 
-                                <div className="about-tabs">
-                                    <button 
-                                        type="button" 
-                                        className={`tab-item ${experience ? "active" : ""}`} 
-                                        data-target="#experience" onClick={handleClickEx}
-                                        >
-                                        experience
-                                    </button>
-                                    <button 
-                                        type="button" 
-                                        className={`tab-item ${education ? "active" : ""}`}
-                                        data-target="#education"
-                                        onClick={handleClickEd}
-                                        >
-                                            education
-                                    </button>
-                                </div>
-
-                                
-                                {experience ? <Experience /> : null}
-
-                                {education ? <Education /> : null}
-                                
-
-                                <Link to={cv} target="_blank">
-                                    <Button className='btn'>
-                                        download cv
-                                    </Button>
-                                </Link>
-                                
-                                <Link to="/contact">
-                                    <Button href="#" className='btn'>
-                                        contact me
-                                    </Button>
-                                </Link>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </animated.section>
-            }
-
-        </animated.div>
-        
+            </animated.div>
+        </div>
     )
 }
 
-export default About
+export default About;

@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom'
 import { useSpring, animated } from 'react-spring'
-import { ThemeContext } from '../ThemeContext';
+import ThemeContext from '../Context/ThemeContext';
 
 import '../../pages/styles/home.css'
 import './nav.css'
