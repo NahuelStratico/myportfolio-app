@@ -29,6 +29,9 @@
     margin: auto;
     border-radius: 10px;
 }
+.about-img .img-box.dark{
+    border: 2px solid var(--green-dark);
+}
 .about-img .img-box img{
     width: 100%;
 }
@@ -48,6 +51,10 @@
     text-transform: capitalize;
     margin: 0 10px 10px 0;
     border-radius: 20px;
+}
+.about-text .skill-item.dark{
+    color: var(--green-dark);
+    font-weight: 500;
 }
 .about-tabs{
     margin-top: 20px;
@@ -95,6 +102,9 @@
 .about-text .timeline{
     position: relative;
 }
+.timeline.dark{
+    color: var(--green-dark);
+}
 .about-text .timeline::before{
     content: '';
     position: absolute;
@@ -104,15 +114,15 @@
     left: 5px;
     background-color: var(--main-color);
 }
+.timeline::before.dark{
+    color: var(--green-dark);
+}
 /* .about-text  */
 .tab-content{
     padding: 40px 0;
     /* display: none; */
 }
-/* .about-text  */
-/* .tab-content.active{
-    display: block;
-} */
+
 /* .about-text  */
 .timeline-item{
     margin-bottom: 30px;
@@ -140,6 +150,9 @@
     color: var(--main-color);
     font-weight: 400;
     margin: 0 0 10px;
+}
+.timeline-item .date.dark{
+    color: var(--green-dark);
 }
 /* .about-text  */
 .timeline-item h4{

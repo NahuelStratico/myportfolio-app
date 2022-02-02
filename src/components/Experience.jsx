@@ -1,8 +1,14 @@
+import { useContext } from 'react';
 import {experience} from './ArrayList'
+
+import ThemeContext from './Context/ThemeContext';
 import '../pages/styles/home.css'
 import '../pages/styles/about.css'
 
 const Experience = () => {
+
+    const {theme} = useContext(ThemeContext);
+
     return(
         <div className='tab-content'>
         {

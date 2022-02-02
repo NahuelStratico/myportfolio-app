@@ -10,15 +10,15 @@ import Experience from '../components/Experience'
 
 import Switch from '../components/Switch'
 import { skills } from '../components/ArrayList'
-import Button from '../components/styled'
+
 import image from '../img/nahuel.png'
-import cv from '../img/cv-nahuel-stratico.pdf'
+import cv from '../img/ResumeNahuelStratico.pdf';
 import './styles/home.css'
 import './styles/about.css'
 
 const About = () =>{
 
-    const { darkMode, theme } = useContext(ThemeContext);
+    const { theme } = useContext(ThemeContext);
     
     const [activeNav, setActiveNav] = useState(false)
     const [ education, setEducation ] = useState(false)
@@ -68,7 +68,7 @@ const About = () =>{
                             </div>
                             <div className="row">
                                 <div className="about-img">
-                                    <div className="img-box">
+                                    <div className={theme? 'img-box dark':"img-box"}>
                                         <img src={image} alt="about img" />
                                     </div>
                                 </div>
@@ -81,7 +81,7 @@ const About = () =>{
                                     <div className="skills">
                                         {
                                                 skills.map((item, index) => (
-                                                    <div className="skill-item" key={index}>
+                                                    <div className={theme ? 'skill-item dark':"skill-item"} key={index}>
                                                         {item}
                                                     </div>
                                                 ))
@@ -113,16 +113,12 @@ const About = () =>{
                                     {education ? <Education /> : null}
                                     
 
-                                    <Link to={cv} target="_blank">
-                                        <Button className='btn'>
-                                            download cv
-                                        </Button>
+                                    <Link to={cv} target="_blank" className={ theme ? 'btn dark' : 'btn'}>
+                                        download cv
                                     </Link>
                                     
-                                    <Link to="/contact">
-                                        <Button href="#" className='btn'>
-                                            contact me
-                                        </Button>
+                                    <Link to="/contact" className={ theme ? 'btn dark' : 'btn'}>
+                                        contact me
                                     </Link>
                                     
                                 </div>

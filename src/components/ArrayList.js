@@ -44,7 +44,7 @@ export const experience = [
     },
 ]
 
-export const skills = ['html', 'css', 'javascript', 'bootstrap', 'react', 'figma', 'sass', 'github']
+export const skills = ['html', 'css', 'javascript', 'bootstrap', 'react','react native', 'figma', 'sass', 'github']
 
 
 // export const portfolio = [

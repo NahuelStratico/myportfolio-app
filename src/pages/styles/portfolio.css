@@ -97,9 +97,15 @@ Pop up
 .pp-body .general-info li span{
     font-weight: 300;
 }
+.technologies{
+    color: var(--green-dark);
+}
 .pp-body .general-info li a{
     text-transform: lowercase;
     color: var(--main-color);
+}
+.pp-body .general-info li a.dark{
+    color: #fff;
 }
 
 /* Responsive */

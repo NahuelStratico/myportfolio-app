@@ -1,17 +1,18 @@
-import { useState } from 'react'
-import emailjs from 'emailjs-com'
-import { motion, AnimatePresence } from "framer-motion"
-import Button from '../components/styled'
-import Modal from '../components/Modal/index'
-import '../pages/styles/contact.css'
+import { useState, useContext } from 'react';
+import emailjs from 'emailjs-com';
+import { motion, AnimatePresence } from "framer-motion";
+
+import ThemeContext from './Context/ThemeContext';
+import Modal from '../components/Modal/index';
+import '../pages/styles/contact.css';
 
 const Form = () => {
 
-    const [ openMessage, setOpenMessage ] = useState(false)
+    const [ openMessage, setOpenMessage ] = useState(false);
+    const { theme } = useContext(ThemeContext);
 
     const close = () => {
-        setOpenMessage(false)
-        console.log('click close')
+        setOpenMessage(false);
     }
 
     function sendEmail(e) {
@@ -49,7 +50,7 @@ const Form = () => {
                     onClick={() => null}
                     className='reset_btn'
                     >
-                        <Button type='submit' value="Send"> send message </Button>
+                        <button className={ theme ? 'btn dark' : 'btn'} type='submit' value="Send"> send message </button>
 
                     </motion.button>
                     <AnimatePresence

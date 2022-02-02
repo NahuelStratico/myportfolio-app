@@ -1,6 +1,5 @@
 import { useState, useContext } from 'react'
 import { Link } from "react-router-dom";
-// import Button from '../components/styled'
 import { useSpring, animated } from 'react-spring'
 import ThemeContext from '../components/Context/ThemeContext';
 
